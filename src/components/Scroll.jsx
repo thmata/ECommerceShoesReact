@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ShoesSvg from "../img/product/prod.svg";
+import ProductInfo from "./ProductInfo";
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,8 +23,11 @@ const ArrowTop = styled.img`
   padding: 5px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
-const ArrowBottom = styled.img``;
+const ArrowBottom = styled.img`
+  cursor: pointer;
+`;
 const ProductImage = styled.img``;
 
 const SelectedImage = styled.div`
@@ -37,7 +41,7 @@ const BigImage = styled.img`
 
 const InfoContainer = styled.div`
   height: 34.563rem;
-  width: 27.75rem;
+  width: 40.75rem;
   border: 2px solid #d2e1df;
   margin-left: 10rem;
 `;
@@ -60,7 +64,7 @@ const Scroll = () => {
         <BigImage src={ShoesSvg} />
       </SelectedImage>
       <InfoContainer>
-        <Info></Info>
+        <ProductInfo />
       </InfoContainer>
     </Wrapper>
   );
