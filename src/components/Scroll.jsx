@@ -28,7 +28,6 @@ const ArrowTop = styled.img`
 const ArrowBottom = styled.img`
   cursor: pointer;
 `;
-const ProductImage = styled.img``;
 
 const SelectedImage = styled.div`
   margin-left: 52px;
@@ -45,8 +44,6 @@ const InfoContainer = styled.div`
   border: 2px solid #d2e1df;
   margin-left: 10rem;
 `;
-
-const Info = styled.div``;
 
 const Scroll = () => {
   return (

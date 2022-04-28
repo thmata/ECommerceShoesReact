@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Way from "../components/Way";
 import Scroll from "../components/Scroll";
-import ProductImage from "../components/ProductImage";
 
 const Limit = styled.div`
   display: flex;

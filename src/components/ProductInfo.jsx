@@ -48,12 +48,73 @@ const SelectedColor = styled.div`
 `;
 
 const Red = styled.img`
-border-radius 100%;
-  border: 1px solid #DE8F75;
+  border: 1px solid #de8f75;
+  border-radius: 100%;
 `;
 const Blue = styled.img``;
 const Brow = styled.img``;
 const Black = styled.img``;
+const SizeContainer = styled.div`
+  display: flex;
+  margin-top: 30px;
+  margin-right: 38px;
+  justify-content: space-between;
+`;
+
+const SizeLetter = styled.div``;
+const SizeNumber = styled.span`
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5f75aa;
+`;
+const SizeGuide = styled.div`
+  color: #de8f75;
+  text-decoration: underline;
+`;
+
+const NumberContainer = styled.div`
+  margin-top: 5px;
+  display: flex;
+`;
+const NumberSelection = styled.div`
+  background-color: ${(props) => props.bcolor};
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  border: 1px solid #ebebeb;
+  color: ${(props) => props.color};
+  /* background: #${(props) => props.color}; */
+  font-weight: ${(props) => props.weight};
+  font-size: 14px;
+  margin-right: 3px;
+  cursor: pointer;
+`;
+
+const ButtonBag = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #32917b;
+  border-radius: 3px;
+  height: 3.75rem;
+  width: 25.25rem;
+  color: white;
+  font-weight: 18px;
+  cursor: pointer;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+`;
+
+const DescriptionContainer = styled.div`
+  margin-top: 20px;
+`;
+const Description = styled.div``;
 
 const ProductInfo = () => {
   return (
@@ -80,6 +141,35 @@ const ProductInfo = () => {
           <Black src={require("../img/Colors/preto.png")} />
         </ColorSelector>
       </ColorContainer>
+      <SizeContainer>
+        <SizeLetter>
+          Tamanho: <SizeNumber>(37)</SizeNumber>{" "}
+        </SizeLetter>
+        <SizeGuide>Guia de Medidas</SizeGuide>
+      </SizeContainer>
+      <NumberContainer>
+        <NumberSelection color="#5F75AA">33</NumberSelection>
+        <NumberSelection color="#5F75AA">34</NumberSelection>
+        <NumberSelection color="#5F75AA">35</NumberSelection>
+        <NumberSelection color="#5F75AA">36</NumberSelection>
+        <NumberSelection bcolor="#DE8F75" weight="600" color="white">
+          37
+        </NumberSelection>
+        <NumberSelection color="#5F75AA">38</NumberSelection>
+        <NumberSelection color="#5F75AA">39</NumberSelection>
+        <NumberSelection color="#5F75AA">40</NumberSelection>
+        <NumberSelection color="#5F75AA">41</NumberSelection>
+        <NumberSelection color="#5F75AA">42</NumberSelection>
+      </NumberContainer>
+      <ButtonContainer>
+        <ButtonBag>ADICIONAR À SACOLA</ButtonBag>
+      </ButtonContainer>
+      <DescriptionContainer>
+        <Description>
+          Rasteira em atanado soft com tira no dedo e fechamento de fivela.
+          Possui sola sempre na cor do cabedal.
+        </Description>
+      </DescriptionContainer>
     </Container>
   );
 };
