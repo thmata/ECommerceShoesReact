@@ -6,6 +6,8 @@ import Way from "../components/Way";
 import Scroll from "../components/Scroll";
 import OtherProducts from "../components/OtherProducts";
 import Footer from "../components/Footer";
+import Modal from "../components/Modal";
+import Minicart from "../components/Minicart";
 
 const Limit = styled.div`
   display: flex;

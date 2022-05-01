@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
+import Minicart from "./Minicart";
 
 const Container = styled.div`
   height: 3.125rem;
@@ -65,10 +67,13 @@ const BagContainer = styled.div`
   height: 1.6rem;
   width: 3rem;
 `;
-const ImageBag = styled.img``;
+const ImageBag = styled.img`
+  cursor: pointer;
+`;
 const BagCout = styled.div``;
 
 const Navbar = () => {
+  const [miniCartVisible, setMiniCartVisible] = useState(false);
   return (
     <Container>
       <Wrapper>
@@ -89,7 +94,13 @@ const Navbar = () => {
             <Input placeholder="Busca" />
           </SearchContainer>
           <BagContainer>
-            <ImageBag src={require("../img/icons/bag.png")} />
+            <ImageBag
+              onClick={() => setMiniCartVisible(!miniCartVisible)}
+              src={require("../img/icons/bag.png")}
+            />
+            {miniCartVisible ? (
+              <Minicart onChange={() => setMiniCartVisible(false)} />
+            ) : null}
             <BagCout>0</BagCout>
           </BagContainer>
         </Right>

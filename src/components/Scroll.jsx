@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ShoesSvg from "../img/product/prod.svg";
+import Modal from "./Modal";
 import ProductInfo from "./ProductInfo";
 
 const Wrapper = styled.div`

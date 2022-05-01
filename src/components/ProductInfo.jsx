@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Modal from "./Modal";
 
 const Container = styled.div`
   margin: 20px 20px 20px 20px;
@@ -117,6 +118,7 @@ const DescriptionContainer = styled.div`
 const Description = styled.div``;
 
 const ProductInfo = () => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <Container>
       <Header>
@@ -162,7 +164,11 @@ const ProductInfo = () => {
         <NumberSelection color="#5F75AA">42</NumberSelection>
       </NumberContainer>
       <ButtonContainer>
-        <ButtonBag>ADICIONAR À SACOLA</ButtonBag>
+        <ButtonBag onClick={() => setModalVisible(true)}>
+          ADICIONAR À SACOLA
+        </ButtonBag>
+        {modalVisible ? <Modal onClose={() => setModalVisible(false)} /> : null}
+        {/* {modalVisible ? <Modal onClose={() => setModalVisible(false)} /> : null} */}
       </ButtonContainer>
       <DescriptionContainer>
         <Description>
