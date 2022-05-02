@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Cartitens from "./Cartitens";
+import MiniCartMobile from "./MiniCartMobile";
 
 const Container = styled.div`
   background-color: #20202099;
@@ -145,80 +146,93 @@ const FinishButton = styled.button`
   font-size: 12px;
 `;
 
+const Main = styled.div``;
+const Mobile = styled.div`
+  display: none;
+  @media (max-width: 320px) {
+    display: block;
+  }
+`;
+
 const Minicart = ({ onChange }) => {
   return (
-    <Container>
-      <RightContainer>
-        <Header>
-          <CloseButton>
-            <Xbutton
-              onClick={onChange}
-              src={require("../img/icons/x.png")}
-            ></Xbutton>
-          </CloseButton>
-          <Position>
-            <Title>Sacola</Title>
-            <SubTitle>5 itens</SubTitle>
-            <Divider></Divider>
-            <Items>
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod2.png")}
-              />
-              <Cartitens
-                name="Bolsa Tressê Rolotê"
-                photo={require("../img/product/sprod3.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod4.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-              <Cartitens
-                name="Rasteira Tira Dedo"
-                photo={require("../img/product/sprod1.png")}
-              />
-            </Items>
-          </Position>
-        </Header>
-        <Footer>
-          <Top>
-            <FooterTopText>Faltam R$ xx,xx para você</FooterTopText>
-            <FooterTopText2>Ganhar Frete Grátis</FooterTopText2>
-          </Top>
-          <Bottom>
-            <BottomInside>
-              <LeftSide>
-                <TotalPrice>Total: R$ 149,00</TotalPrice>
-                <TotalDivide>até 3x de R$ 49,90 sem juros</TotalDivide>
-              </LeftSide>
-              <RightSide>
-                <FinishButton>Finalizar compra</FinishButton>
-              </RightSide>
-            </BottomInside>
-          </Bottom>
-        </Footer>
-      </RightContainer>
-    </Container>
+    <Main>
+      <Mobile>
+        <MiniCartMobile />
+      </Mobile>
+      <Container>
+        <RightContainer>
+          <Header>
+            <CloseButton>
+              <Xbutton
+                onClick={onChange}
+                src={require("../img/icons/x.png")}
+              ></Xbutton>
+            </CloseButton>
+            <Position>
+              <Title>Sacola</Title>
+              <SubTitle>5 itens</SubTitle>
+              <Divider></Divider>
+              <Items>
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod2.png")}
+                />
+                <Cartitens
+                  name="Bolsa Tressê Rolotê"
+                  photo={require("../img/product/sprod3.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod4.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+                <Cartitens
+                  name="Rasteira Tira Dedo"
+                  photo={require("../img/product/sprod1.png")}
+                />
+              </Items>
+            </Position>
+          </Header>
+          <Footer>
+            <Top>
+              <FooterTopText>Faltam R$ xx,xx para você</FooterTopText>
+              <FooterTopText2>Ganhar Frete Grátis</FooterTopText2>
+            </Top>
+            <Bottom>
+              <BottomInside>
+                <LeftSide>
+                  <TotalPrice>Total: R$ 149,00</TotalPrice>
+                  <TotalDivide>até 3x de R$ 49,90 sem juros</TotalDivide>
+                </LeftSide>
+                <RightSide>
+                  <FinishButton>Finalizar compra</FinishButton>
+                </RightSide>
+              </BottomInside>
+            </Bottom>
+          </Footer>
+        </RightContainer>
+      </Container>
+    </Main>
   );
 };
 

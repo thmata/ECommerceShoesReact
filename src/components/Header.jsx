@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import brandeoriginal from "../img/Vector.svg";
+import MiniCartMobile from "./MiniCartMobile";
 
 const Container = styled.h1`
   /* width: 80rem; */
@@ -78,13 +79,20 @@ const ContainerRight = styled.div`
 const Main = styled.div``;
 
 const Header = () => {
+  const [miniCartVisible, setMiniCartVisible] = useState(false);
   return (
     <Main>
       <ButtonsMobile>
         <MenuMobile src={require("../img/icons/mobile/menu.png")} />
         <ContainerRight>
           <SearchMobile src={require("../img/icons/mobile/search.png")} />
-          <BagMobile src={require("../img/icons/mobile/bag.png")} />
+          <BagMobile
+            onClick={() => setMiniCartVisible(true)}
+            src={require("../img/icons/mobile/bag.png")}
+          />
+          {miniCartVisible ? (
+            <MiniCartMobile onClose={() => setMiniCartVisible(false)} />
+          ) : null}
         </ContainerRight>
       </ButtonsMobile>
       <Container>

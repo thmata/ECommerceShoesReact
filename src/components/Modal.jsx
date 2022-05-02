@@ -22,7 +22,7 @@ const CenterContainer = styled.div`
   height: 602px;
   border-radius: 3px;
   @media (max-width: 320px) {
-    margin-top: -350px;
+    margin-top: 0%;
     width: 290px;
     height: 430px;
   }

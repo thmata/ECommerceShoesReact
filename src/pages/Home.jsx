@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Way from "../components/Way";
-import Scroll from "../components/Scroll";
+import ProductPage from "../components/ProductPage";
 import OtherProducts from "../components/OtherProducts";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
@@ -33,7 +33,7 @@ const home = () => {
         <Way />
       </Limit2>
       <Limit>
-        <Scroll display="flex" />
+        <ProductPage display="flex" />
       </Limit>
       <OtherProducts />
       <Footer />
