@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import brandeoriginal from "../img/originalw.svg";
+import FooterMobile from "./FooterMobile";
 
 const MainContainer = styled.div`
   display: flex;
@@ -167,9 +168,19 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `;
 
+const Mobile = styled.div`
+  display: none;
+  @media (max-width: 320px) {
+    display: block;
+  }
+`;
+
 const Footer = () => {
   return (
     <Container>
+      <Mobile>
+        <FooterMobile />
+      </Mobile>
       <MainContainer>
         <SocialVtex>
           <Vtexz>

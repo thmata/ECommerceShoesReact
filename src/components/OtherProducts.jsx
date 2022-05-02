@@ -18,6 +18,9 @@ const BigContainer = styled.div`
   margin-top: 100px;
   margin-left: 50px;
   margin-right: 50px;
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -58,10 +61,18 @@ const Circle = styled.div`
 `;
 
 const Main = styled.div``;
+const Mobile = styled.div`
+  display: none;
+  @media (max-width: 320px) {
+    display: block;
+  }
+`;
 const OtherProducts = () => {
   return (
     <Main>
-      <OtherProductsMobile />
+      <Mobile>
+        <OtherProductsMobile />
+      </Mobile>
       <BigContainer>
         {" "}
         <Title>QUEM VIU, VIU TAMBÉM</Title>

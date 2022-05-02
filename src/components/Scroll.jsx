@@ -280,68 +280,81 @@ const Description = styled.div`
   }
 `;
 
+const Mobile = styled.div`
+  display: none;
+  @media (max-width: 320px) {
+    display: block;
+  }
+`;
+
 const Scroll = () => {
   return (
     <Main>
-      <WrapperMobile>
-        <HeaderMobile>
-          <TitleMobile>RASTEIRA TIRA DEDO</TitleMobile>
-          <CodeMobile>RT 0568 | 03.07.0653</CodeMobile>
-          <ImageMobile src={prodimg} />
-          <ScrollMobile>
-            <ImgVideo src={require("../img/icons/mobile/video.png")} />
-            <ImgPoint1 src={require("../img/icons/mobile/point1.png")} />
-            <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
-            <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
-            <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
-            <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
-          </ScrollMobile>
-          <ColorContainerMobile>
-            <ColorTextMobile>Cor:</ColorTextMobile>
-            <ColorImgMobile>
-              <VinhoMobile src={require("../img/Colors/vinho.png")} />
-              <AzulMobile src={require("../img/Colors/azul.png")} />
-              <MarromMobile src={require("../img/Colors/marrom.png")} />
-              <PretoMobile src={require("../img/Colors/preto.png")} />
-            </ColorImgMobile>
-          </ColorContainerMobile>
-          <SizeContainerMobile>
-            <SizeLetterMobile>Tamanho:</SizeLetterMobile>
-            <SizeGuideMobile>Guia de Medidas</SizeGuideMobile>
-          </SizeContainerMobile>
-          <NumberContainerMobile>
-            <NumberSelectionMobile color="#5F75AA">33</NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">34</NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">35</NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">36</NumberSelectionMobile>
-            <NumberSelectionMobile bcolor="#DE8F75" weight="600" color="white">
-              37
-            </NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">38</NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">39</NumberSelectionMobile>
-            <NumberSelectionMobile color="#5F75AA">40</NumberSelectionMobile>
-          </NumberContainerMobile>
+      <Mobile>
+        <WrapperMobile>
+          <HeaderMobile>
+            <TitleMobile>RASTEIRA TIRA DEDO</TitleMobile>
+            <CodeMobile>RT 0568 | 03.07.0653</CodeMobile>
+            <ImageMobile src={prodimg} />
+            <ScrollMobile>
+              <ImgVideo src={require("../img/icons/mobile/video.png")} />
+              <ImgPoint1 src={require("../img/icons/mobile/point1.png")} />
+              <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
+              <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
+              <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
+              <ImgPoint0 src={require("../img/icons/mobile/point0.png")} />
+            </ScrollMobile>
+            <ColorContainerMobile>
+              <ColorTextMobile>Cor:</ColorTextMobile>
+              <ColorImgMobile>
+                <VinhoMobile src={require("../img/Colors/vinho.png")} />
+                <AzulMobile src={require("../img/Colors/azul.png")} />
+                <MarromMobile src={require("../img/Colors/marrom.png")} />
+                <PretoMobile src={require("../img/Colors/preto.png")} />
+              </ColorImgMobile>
+            </ColorContainerMobile>
+            <SizeContainerMobile>
+              <SizeLetterMobile>Tamanho:</SizeLetterMobile>
+              <SizeGuideMobile>Guia de Medidas</SizeGuideMobile>
+            </SizeContainerMobile>
+            <NumberContainerMobile>
+              <NumberSelectionMobile color="#5F75AA">33</NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">34</NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">35</NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">36</NumberSelectionMobile>
+              <NumberSelectionMobile
+                bcolor="#DE8F75"
+                weight="600"
+                color="white"
+              >
+                37
+              </NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">38</NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">39</NumberSelectionMobile>
+              <NumberSelectionMobile color="#5F75AA">40</NumberSelectionMobile>
+            </NumberContainerMobile>
 
-          <PriceContainerMobile>
-            <LeftMobile>
-              <DescontoMobile>R$ 69,00</DescontoMobile>
-              <RealPriceMobile>R$ 55,20</RealPriceMobile>
-              <DivideMobile>Ou 6x de R$ 9,20</DivideMobile>
-            </LeftMobile>
-            <RightMobile>
-              <ButtonBagMobile>Adicionar à sacola</ButtonBagMobile>
-            </RightMobile>
-          </PriceContainerMobile>
+            <PriceContainerMobile>
+              <LeftMobile>
+                <DescontoMobile>R$ 69,00</DescontoMobile>
+                <RealPriceMobile>R$ 55,20</RealPriceMobile>
+                <DivideMobile>Ou 6x de R$ 9,20</DivideMobile>
+              </LeftMobile>
+              <RightMobile>
+                <ButtonBagMobile>Adicionar à sacola</ButtonBagMobile>
+              </RightMobile>
+            </PriceContainerMobile>
 
-          <ContainerDescriptionMobile>
-            <TitleDescription>Descrição</TitleDescription>
-            <Description>
-              Rasteira em atanado soft com tira no dedo e fechamento de fivela.
-              Possui sola sempre na cor do cabedal.
-            </Description>
-          </ContainerDescriptionMobile>
-        </HeaderMobile>
-      </WrapperMobile>
+            <ContainerDescriptionMobile>
+              <TitleDescription>Descrição</TitleDescription>
+              <Description>
+                Rasteira em atanado soft com tira no dedo e fechamento de
+                fivela. Possui sola sempre na cor do cabedal.
+              </Description>
+            </ContainerDescriptionMobile>
+          </HeaderMobile>
+        </WrapperMobile>
+      </Mobile>
       <Wrapper>
         <Scrolll>
           <ArrowTop src={require("../img/icons/arrowtop.png")} />
