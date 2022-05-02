@@ -6,6 +6,9 @@ import Minicart from "./Minicart";
 const Container = styled.div`
   height: 3.125rem;
   border: 1px solid #cccccc;
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 const Wrapper = styled.div`
   display: flex;

@@ -11,8 +11,11 @@ import Minicart from "../components/Minicart";
 
 const Limit = styled.div`
   display: flex;
+  justify-content: center;
+`;
+
+const Limit2 = styled.div`
   margin-left: 50px;
-  margin-right: 50px;
 `;
 
 // const Limit2 = styled.div`
@@ -26,9 +29,9 @@ const home = () => {
     <div>
       <Header />
       <Navbar />
-      <Limit>
+      <Limit2>
         <Way />
-      </Limit>
+      </Limit2>
       <Limit>
         <Scroll display="flex" />
       </Limit>

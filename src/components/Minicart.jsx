@@ -64,6 +64,29 @@ const Items = styled.div`
   display: flex;
   flex-direction: column;
   gap: 45px;
+  max-height: 500px;
+  overflow: auto;
+  margin-right: 20px;
+  ::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #de8f75;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
 
 const Footer = styled.div`
@@ -153,6 +176,22 @@ const Minicart = ({ onChange }) => {
               <Cartitens
                 name="Rasteira Tira Dedo"
                 photo={require("../img/product/sprod4.png")}
+              />
+              <Cartitens
+                name="Rasteira Tira Dedo"
+                photo={require("../img/product/sprod1.png")}
+              />
+              <Cartitens
+                name="Rasteira Tira Dedo"
+                photo={require("../img/product/sprod1.png")}
+              />
+              <Cartitens
+                name="Rasteira Tira Dedo"
+                photo={require("../img/product/sprod1.png")}
+              />
+              <Cartitens
+                name="Rasteira Tira Dedo"
+                photo={require("../img/product/sprod1.png")}
               />
               <Cartitens
                 name="Rasteira Tira Dedo"

@@ -6,6 +6,9 @@ const Container = styled.div`
   align-items: center;
   height: 2.375rem;
   width: 9.625rem;
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const Item = styled.div`

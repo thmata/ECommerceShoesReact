@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { OtherProductss } from "../data";
+import OtherProductsMobile from "./OtherProductsMobile";
 import { Product } from "./Product";
 
 const Container = styled.div`
@@ -55,26 +56,31 @@ const Circle = styled.div`
   width: 35px;
   cursor: pointer;
 `;
+
+const Main = styled.div``;
 const OtherProducts = () => {
   return (
-    <BigContainer>
-      {" "}
-      <Title>QUEM VIU, VIU TAMBÉM</Title>
-      <Container>
-        {OtherProductss.map((item) => (
-          <Product item={item} key={item.id} />
-        ))}
-      </Container>
-      <ButtonScroll>
-        <Circle>
-          <ButtonLeft src={require("../img/icons/buttonleft.png")} />{" "}
-        </Circle>
-        <Text>1 de 3</Text>
-        <Circle>
-          <ButtonRight src={require("../img/icons/buttonright.png")} />
-        </Circle>
-      </ButtonScroll>
-    </BigContainer>
+    <Main>
+      <OtherProductsMobile />
+      <BigContainer>
+        {" "}
+        <Title>QUEM VIU, VIU TAMBÉM</Title>
+        <Container>
+          {OtherProductss.map((item) => (
+            <Product item={item} key={item.id} />
+          ))}
+        </Container>
+        <ButtonScroll>
+          <Circle>
+            <ButtonLeft src={require("../img/icons/buttonleft.png")} />{" "}
+          </Circle>
+          <Text>1 de 3</Text>
+          <Circle>
+            <ButtonRight src={require("../img/icons/buttonright.png")} />
+          </Circle>
+        </ButtonScroll>
+      </BigContainer>
+    </Main>
   );
 };
 
