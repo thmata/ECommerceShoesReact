@@ -8,6 +8,9 @@ const MainContainer = styled.div`
   margin-top: 144px;
   height: 229px;
   border-top: 2px solid #aeb6c1;
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const SocialVtex = styled.div`
@@ -104,6 +107,9 @@ const FinalContainer = styled.div`
   padding-right: 100px;
   display: flex;
   align-items: center;
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const FooterText = styled.div`

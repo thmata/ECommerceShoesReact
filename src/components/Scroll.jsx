@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ShoesSvg from "../img/product/prod.svg";
 import Modal from "./Modal";
@@ -288,6 +288,7 @@ const Mobile = styled.div`
 `;
 
 const Scroll = () => {
+  const [modalMobileVisible, setModalMobileVisible] = useState(false);
   return (
     <Main>
       <Mobile>
@@ -341,7 +342,12 @@ const Scroll = () => {
                 <DivideMobile>Ou 6x de R$ 9,20</DivideMobile>
               </LeftMobile>
               <RightMobile>
-                <ButtonBagMobile>Adicionar à sacola</ButtonBagMobile>
+                <ButtonBagMobile onClick={() => setModalMobileVisible(true)}>
+                  Adicionar à sacola
+                </ButtonBagMobile>
+                {modalMobileVisible ? (
+                  <Modal onClose={() => setModalMobileVisible(false)} />
+                ) : null}
               </RightMobile>
             </PriceContainerMobile>
 
